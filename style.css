@@ -22,10 +22,14 @@ header {
     margin: auto;
 }
 
+
+  
+
 header a {
     color: #eee;
     margin-right: 40px;
     font-weight: 300;
+    font-size: 14px;
 }
 
 .container {
@@ -107,13 +111,13 @@ header a {
 .container .thumb {
     position: absolute;
     bottom: 50px;
-    left: 50%;
+    left: 48%;
     display: flex;
     gap: 20px;
 }
 
 .container .thumb .thumb-item {
-    width: 135px;
+    width: 140px;
     height: 200px;
     position: relative;
     z-index: 3;
@@ -257,3 +261,173 @@ header a {
         bottom: 50px;
     }
 }
+
+/* Responsive */
+
+/* Para telas menores que 1024px (tablets) */
+@media (max-width: 1024px) {
+    header {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header nav {
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+
+    header nav a {
+        font-size: 1.6em;
+    }
+
+    .container .list .list-item .title {
+        font-size: 4em;
+    }
+
+    .container .list .list-item .description {
+        font-size: 1.2em;
+    }
+
+    .container .list .list-item .buttons {
+        display: grid;  
+        grid-template-columns: repeat(2, 1fr); /* Define duas colunas iguais */
+        grid-template-rows: auto; /* Mantém o comportamento atual das linhas */
+        width: 60%;
+        letter-spacing: 3px;
+        margin-top: 20px;
+        gap: 5px; /* Espaçamento entre os botões */
+    }
+
+    .container .list .list-item .buttons button {
+        padding: 10px 20px;
+    }
+    .container .thumb {
+        left: 40%;
+        gap: 15px;
+    }
+
+    .container .thumb .thumb-item {
+        width: 120px;
+        height: 160px;
+    }
+
+    
+}
+/* Para telas menores que 768px (smartphones e tablets pequenos) */
+@media (max-width: 768px) {
+    .container {
+        height: auto; /* Permitir que o conteúdo se expanda */
+    }
+
+    .container .list .list-item .content {
+        padding-right: 10%;
+        width: 90%;
+        top: 10%;
+        right: 5%;
+    }
+
+    .container .list .list-item .title {
+        font-size: 3em; /* Reduzir tamanho do título */
+    }
+
+    .container .list .list-item .description {
+        font-size: 1em; /* Reduzir tamanho da descrição */
+    }
+
+    .container .thumb {
+        left: 30%;
+        gap: 10px;
+    }
+
+    .container .thumb .thumb-item {
+        width: 100px;
+        height: 140px;
+    }
+
+    .container .arrows {
+        left: 50px;
+        width: 200px;
+    }
+
+    .container .arrows button {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
+
+/* Para telas menores que 480px (smartphones pequenos) */
+@media (max-width: 430px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+
+    header {
+        align-items: flex-start; /* Alinha itens à esquerda */
+    }
+    
+    header nav {
+        display: flex; /* Mantém o nav como um contêiner flexível */
+        justify-content: space-between; /* Distribui os links com espaçamento igual */
+        width: 100%; /* Garante que o nav ocupe toda a largura */
+    }
+
+    header nav a {
+        text-align: center; /* Centraliza o texto */
+        font-size: 100%; /* Tamanho da fonte */
+        padding: auto; /* Adiciona espaçamento ao redor do link */
+        box-sizing: border-box; /* Inclui padding na largura total */
+    }
+
+    .container .list .list-item .title {
+        margin-top: 10%;
+        font-size: 2em;
+        padding-left: 8%;
+    }
+
+    .container .list .list-item .description {
+        font-size: 1em;
+        padding-left: 8%;
+    }
+
+    .container .list .list-item .buttons button {
+        font-size: .9em;
+    }
+
+    .container .list .list-item .buttons {
+        grid-template-columns: 2 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+        padding-left: 8%;
+
+    }
+
+    .container .thumb {
+        left: 10%;
+        bottom: 15%;
+        gap: 10px;
+    }
+
+    .container .thumb .thumb-item {
+        width: 80px;
+        height: 120px;
+    }
+
+    .container .thumb .content {
+        font-size: .6em;
+    }
+
+    .container .arrows {
+        left: 45%;
+        top: 90%;
+        width: 150px;
+    }
+
+    .container .arrows button {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
